@@ -1,0 +1,54 @@
+##ReadData.txt --- 
+## 
+## Description: 填卡式读取--数据。
+## Author: Hongyi Wu(吴鸿毅)
+## Email: wuhongyi@qq.com 
+## Created: 五 4月 18 18:16:22 2014 (+0800)
+## Last-Updated: 五 7月  7 19:43:07 2017 (+0800)
+##           By: Hongyi Wu(吴鸿毅)
+##     Update #: 515
+## URL: http://wuhongyi.cn 
+
+
+##要处理文件路径及文件名，可采用通配符*
+
+AddFileNumber 3
+
+InputFileName_0 ../data_R0153.root
+InputFileName_1 ../data_R0154.root
+InputFileName_2 ../data_R0155.root
+
+
+
+##输出文件名
+OutputFileName  test.root
+
+
+SelectChannel 7
+VotoChannel -1
+VotoTime   100
+
+# 脉冲极性 1-正信号 0-负信号
+PulsePolarity 0
+
+# 采样率 100/250/500
+ADCMSPS 500
+
+CalculateVertexPoint 20
+CalculateBaselinePoint 250
+CalculateRiseTimeType 0
+
+FastFilterFL 0.02
+FastFilterFG 0.01
+FastFilterThre 50
+
+SlowFilterSL 1.0
+SlowFilterSG 0.24
+SlowFilterRange 1
+PreampTau 0.06
+
+#f 0.02 0.01 50
+#s 1.0 0.24 1 0.06
+#s 1.0 0.3 2 0.06
+
+######################################################################
